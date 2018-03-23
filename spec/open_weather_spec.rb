@@ -61,8 +61,28 @@ describe OpenWeather do
       @response = @open_weather.query_ids("524901,703448,2643743") #input city ids
     end
 
-    it "should respond with a status message of 200" do
+    it "should respond with a count (number of searched cities)" do
+      expect(@open_weather.count).to eq(@open_weather.results_array.length)
+    end
+
+    it "should respond with the name 'London'" do
       expect(@open_weather.name(2)).to eq("London")
+    end
+
+    it "should respond with the name 'Kiev'" do
+      expect(@open_weather.name(1)).to eq("Kiev")
+    end
+
+    it "should respond with the name 'Moscow'" do
+      expect(@open_weather.name(0)).to eq("Moscow")
+    end
+
+    it "should respond with the country 'GB' for London" do
+      expect(@open_weather.sys(2)["country"]).to eq("GB")
+    end
+
+    it "should respond with the country 'RU' for Moscow" do
+      expect(@open_weather.sys(0)["country"]).to eq("RU")
     end
   end
 

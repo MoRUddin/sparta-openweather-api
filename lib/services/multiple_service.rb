@@ -11,6 +11,10 @@ class MultipleService
       @weather_result = JSON.parse(self.class.get("#{country_string}&units=metric&appid=660fc4ff59cdcee84eb0321163d68677").body)
     end
 
+    def count
+      weather_result["cnt"]
+    end
+
     def results_array
       weather_result["list"]
     end
@@ -21,10 +25,6 @@ class MultipleService
 
     def weather(i)
       store(i,"weather")
-    end
-
-    def base(i)
-      store(i,"base")
     end
 
     def main(i)
