@@ -10,7 +10,7 @@ To read an API response from the open weather [API](https://openweathermap.org/)
 * The HTTParty gem
 
 ## How to run tests
-* `git clone` the HTML link from [here](https://github.com/MoRUddin/Sparta-JSON-Parsing) to download the project to your local environment
+* `git clone` the HTML link from [here](https://github.com/MoRUddin/sparta-openweather-api) to download the project to your local environment
 * run `bundle` to install the rspec, json, and httparty gems
 * run `rspec` on the project folder to run the tests
 
