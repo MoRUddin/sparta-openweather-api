@@ -13,3 +13,8 @@ To read an API response from the open weather [API](https://openweathermap.org/)
 * `git clone` the HTML link from [here](https://github.com/MoRUddin/Sparta-JSON-Parsing) to download the project to your local environment
 * run `bundle` to install the rspec, json, and httparty gems
 * run `rspec` on the project folder to run the tests
+
+## Main challenges
+* understanding how the API works (using the [documentation](https://openweathermap.org/api))
+* making the multiple search information available per searched city
+* correctly setting up the before hooks for both the single and multiple search contexts
